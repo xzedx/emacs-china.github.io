@@ -6,10 +6,10 @@
 
 本站使用 org-page 搭建，目前仍在搭建过程中，有以下的任务需要完成：
 
-- [X] Integrate with comment system (such as disqus)
-- [X] Add site icon
+- [x] Integrate with comment system (such as disqus)
+- [x] Add site icon
 - [ ] Write the first post
-- [X] Support org-mode
+- [x] Support org-mode
 
 期待你的帮助！
 
