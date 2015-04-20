@@ -42,7 +42,7 @@ $(window).scroll(function () {
             break;
         }
     }
-    kd_n=(startPoint+1)<endPoint?(startPoint+1):endPoint;
+    kd_n=startPoint;
     kd_toc.eq(kd_tmp).children('a').css('color', '#ffff00');
     kd_tmp = kd_n;
     kd_toc.eq(kd_tmp).children('a').css('color', '#22ff22');
