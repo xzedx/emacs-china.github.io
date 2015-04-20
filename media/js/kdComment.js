@@ -31,7 +31,7 @@ $(window).scroll(function () {
     var endPoint=topArray.length-1;
     var offsetValue=window.pageYOffset+40;
     
-    while(startPoint < endPoint){
+    while((startPoint+1) < endPoint){
         if(topArray[Math.floor((startPoint+endPoint)/2)] > offsetValue){
             endPoint = Math.floor((startPoint+endPoint)/2);
         }
@@ -42,7 +42,7 @@ $(window).scroll(function () {
             break;
         }
     }
-    kd_n=(startPoint+1);
+    kd_n = startPoint;
     kd_toc.eq(kd_tmp).children('a').css('color', '#ffff00');
     kd_tmp = kd_n;
     kd_toc.eq(kd_tmp).children('a').css('color', '#22ff22');
