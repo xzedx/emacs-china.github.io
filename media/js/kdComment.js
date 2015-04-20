@@ -32,16 +32,16 @@ $(window).scroll(function () {
     var offsetValue=window.pageYOffset+40;
     while(topArray[startPoint] < offsetValue && topArray[endPoint] > offsetValue){
         if(topArray[Math.floor((startPoint+endPoint)/2)] > offsetValue){
-            endPoint = (startPoint+endPoint)/2;
+            endPoint = Math.floor(startPoint+endPoint)/2;
         }
         else if(topArray[Math.floor((startPoint+endPoint)/2)] < offsetValue){
-            startPoint = (startPoint+endPoint)/2;
+            startPoint = Math.floor(startPoint+endPoint)/2;
         }
         else{
             break;
         }
     }
-    kd_n=startPoint+1;
+    kd_n=(startPoint+1)<endPoint?(startPoint+1):endPoint;
     kd_toc.eq(kd_tmp).children('a').css('color', '#ffff00');
     kd_tmp = kd_n;
     kd_toc.eq(kd_tmp).children('a').css('color', '#22ff22');
