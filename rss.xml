@@ -4,8 +4,8 @@
     <title>EMACS-CHINA</title>
     <link>http://emacs-china.github.io</link>
     <description>=============&gt;集思广益</description>
-    <pubDate>周二, 21 四月 2015 19:29:32 中国标准时间</pubDate>
-    <lastBuildDate>周二, 21 四月 2015 19:29:32 中国标准时间</lastBuildDate>
+    <pubDate>周二, 21 四月 2015 20:27:43 中国标准时间</pubDate>
+    <lastBuildDate>周二, 21 四月 2015 20:27:43 中国标准时间</lastBuildDate>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>Org-page static site generator (https://github.com/kelvinh/org-page)</generator>
     <item>
@@ -30,13 +30,6 @@
       <guid>http://emacs-china.github.io/blog/2015/04/20/介绍一下-org-mode-内置的模板系统/</guid>
     </item>
     <item>
-      <title>org-page的配置与使用</title>
-      <link>http://emacs-china.github.io/blog/2015/04/15/org-page的配置与使用</link>
-      <description>org-page的配置与使用</description>
-      <pubDate>2015-04-21</pubDate>
-      <guid>http://emacs-china.github.io/blog/2015/04/15/org-page的配置与使用</guid>
-    </item>
-    <item>
       <title>org-mode 导出 html 时删除中文与中文之间多余的空格</title>
       <link>http://emacs-china.github.io/blog/2015/04/20/org-mode-导出-html-时删除中文与中文之间多余的空格/</link>
       <description>No Description</description>
@@ -44,11 +37,11 @@
       <guid>http://emacs-china.github.io/blog/2015/04/20/org-mode-导出-html-时删除中文与中文之间多余的空格/</guid>
     </item>
     <item>
-      <title>Quick Guide for Org-page</title>
-      <link>http://emacs-china.github.io/blog/2013/08/24/quick-guide-for-org-page/</link>
-      <description>No Description</description>
+      <title>org-page的配置与使用</title>
+      <link>http://emacs-china.github.io/blog/2015/04/15/org-page的配置与使用</link>
+      <description>org-page的配置与使用</description>
       <pubDate>2015-04-21</pubDate>
-      <guid>http://emacs-china.github.io/blog/2013/08/24/quick-guide-for-org-page/</guid>
+      <guid>http://emacs-china.github.io/blog/2015/04/15/org-page的配置与使用</guid>
     </item>
     <item>
       <title>建站日</title>
@@ -56,6 +49,13 @@
       <description>site-date</description>
       <pubDate>2015-04-21</pubDate>
       <guid>http://emacs-china.github.io/blog/2015/03/15/建站日/</guid>
+    </item>
+    <item>
+      <title>Quick Guide for Org-page</title>
+      <link>http://emacs-china.github.io/blog/2013/08/24/quick-guide-for-org-page/</link>
+      <description>No Description</description>
+      <pubDate>2015-04-21</pubDate>
+      <guid>http://emacs-china.github.io/blog/2013/08/24/quick-guide-for-org-page/</guid>
     </item>
   </channel>
 </rss>
