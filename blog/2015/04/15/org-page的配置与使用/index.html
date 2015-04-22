@@ -171,7 +171,9 @@ html 页面的生成与发布都交给了 <code>M-x op/do-publication</code> 命
 (<span style="color: #00ffff; font-weight: bold;">require</span> '<span style="color: #7fffd4; font-weight: bold;">org-page</span>)
 (<span style="color: #00ffff; font-weight: bold;">defun</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">kd/custom-org-page</span> (<span style="color: #98fb98; font-weight: bold;">&amp;optional</span> site)
   <span style="font-weight: bold;">"choose the org-page's main repository"</span>
-  (interactive (<span style="color: #00ffff; font-weight: bold;">let</span> ((sitet (read-string <span style="color: #7fffd4; font-style: italic;">"&#38745;&#24577;&#31449;&#28857;&#21517;&#65306;"</span>)))
+  (interactive (<span style="color: #00ffff; font-weight: bold;">let</span> ((sitet (completing-read <span style="color: #7fffd4; font-style: italic;">"&#38745;&#24577;&#31449;&#28857;&#21517;: "</span>
+                                '(<span style="color: #7fffd4; font-style: italic;">"kuangdash"</span> <span style="color: #7fffd4; font-style: italic;">"emacs-china"</span>)
+                                nil t nil nil <span style="color: #7fffd4; font-style: italic;">"kuangdash"</span>)))
                  (list sitet)))
   (<span style="color: #00ffff; font-weight: bold;">cond</span> ((equal site <span style="color: #7fffd4; font-style: italic;">"kuangdash"</span>)
          (setq op/repository-directory <span style="color: #7fffd4; font-style: italic;">"~/github/kuangdash.github.io"</span>
@@ -181,7 +183,8 @@ html 页面的生成与发布都交给了 <code>M-x op/do-publication</code> 命
                op/personal-disqus-shortname <span style="color: #7fffd4; font-style: italic;">"kuangdash"</span>
                op/personal-duoshuo-shortname <span style="color: #7fffd4; font-style: italic;">"kuangdash"</span>
                op/site-main-title <span style="color: #7fffd4; font-style: italic;">"&#26377;&#20026;&#23665;&#28145;"</span>
-               op/site-sub-title <span style="color: #7fffd4; font-style: italic;">"It's only when it is truly dark that we can see the stars"</span>)
+               op/site-sub-title <span style="color: #7fffd4; font-style: italic;">"It's only when it is truly dark that we can see the stars"</span>
+               op/organization nil)
          )
 
         <span style="color: #66cdaa; font-style: italic;">;;</span><span style="color: #66cdaa; font-style: italic;">emacs-china</span>
@@ -193,7 +196,8 @@ html 页面的生成与发布都交给了 <code>M-x op/do-publication</code> 命
                op/personal-disqus-shortname <span style="color: #7fffd4; font-style: italic;">"emacs-china"</span>
                op/personal-duoshuo-shortname <span style="color: #7fffd4; font-style: italic;">"emacs-china"</span>
                op/site-main-title <span style="color: #7fffd4; font-style: italic;">"EMACS-CHINA"</span>
-               op/site-sub-title <span style="color: #7fffd4; font-style: italic;">"=============&gt;&#38598;&#24605;&#24191;&#30410;"</span>)
+               op/site-sub-title <span style="color: #7fffd4; font-style: italic;">"=============&gt;&#38598;&#24605;&#24191;&#30410;"</span>
+               op/organization t)
          )
         (t (message <span style="color: #7fffd4; font-style: italic;">"error! no repository"</span>))))
 </pre>
@@ -225,17 +229,21 @@ html 页面的生成与发布都交给了 <code>M-x op/do-publication</code> 命
 <pre class="src src-emacs-lisp">(<span style="color: #00ffff; font-weight: bold;">require</span> '<span style="color: #7fffd4; font-weight: bold;">simple-httpd</span>)
 (<span style="color: #00ffff; font-weight: bold;">defun</span> <span style="color: #87cefa; font-weight: bold; font-style: italic;">kd/test-org-page</span> (<span style="color: #98fb98; font-weight: bold;">&amp;optional</span> site)
   <span style="font-weight: bold;">"test the org-page's main repository"</span>
-  (interactive (<span style="color: #00ffff; font-weight: bold;">let</span> ((sitet (read-string <span style="color: #7fffd4; font-style: italic;">"&#27979;&#35797;&#38745;&#24577;&#31449;&#28857;&#21517;&#65306;"</span>)))
+  (interactive (<span style="color: #00ffff; font-weight: bold;">let</span> ((sitet (completing-read <span style="color: #7fffd4; font-style: italic;">"&#27979;&#35797;&#38745;&#24577;&#31449;&#28857;&#21517;: "</span>
+                                '(<span style="color: #7fffd4; font-style: italic;">"kuangdash"</span> <span style="color: #7fffd4; font-style: italic;">"emacs-china"</span>)
+                                nil t nil nil <span style="color: #7fffd4; font-style: italic;">"kuangdash"</span>)))
                  (list sitet)))
   (<span style="color: #00ffff; font-weight: bold;">cond</span> ((equal site <span style="color: #7fffd4; font-style: italic;">"kuangdash"</span>)
          (op/do-publication t nil <span style="color: #7fffd4; font-style: italic;">"~/webRoot/kuangdash.github.io"</span>)
          (httpd-serve-directory <span style="color: #7fffd4; font-style: italic;">"~/webRoot/kuangdash.github.io"</span>)
+         (browse-url (format <span style="color: #7fffd4; font-style: italic;">"http://%s:%d"</span> system-name httpd-port))
          )
 
         <span style="color: #66cdaa; font-style: italic;">;;</span><span style="color: #66cdaa; font-style: italic;">emacs-china</span>
         ((equal site <span style="color: #7fffd4; font-style: italic;">"emacs-china"</span>)
          (op/do-publication t nil <span style="color: #7fffd4; font-style: italic;">"~/webRoot/emacs-china.github.io"</span>)
          (httpd-serve-directory <span style="color: #7fffd4; font-style: italic;">"~/webRoot/emacs-china.github.io"</span>)
+         (browse-url (format <span style="color: #7fffd4; font-style: italic;">"http://%s:%d"</span> system-name httpd-port))
          )
         (t (message <span style="color: #7fffd4; font-style: italic;">"error! no repository"</span>))))
 </pre>
