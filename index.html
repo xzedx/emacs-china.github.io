@@ -11,42 +11,33 @@
    #ds-thread #ds-reset .ds-comment-body p {color: #ffffff;}
    #disqus_thread a {color: #00ffff;}
   </style>
-  <link rel="stylesheet" media="screen" href="/media/css/font.css" rel="stylesheet" type="text/css"/>
-  <link rel="stylesheet" href="/media/css/main.css" type="text/css">
-  <link rel="stylesheet" href="/media/css/kdComment.css" type="text/css">
+  <link rel="stylesheet" media="screen" href="http://emacs-china.github.io/media/css/font.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="http://emacs-china.github.io/media/css/main.css" type="text/css">
+  <link rel="stylesheet" href="http://emacs-china.github.io/media/css/kdComment.css" type="text/css">
   <script type="text/javascript"
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
 </head>
 
   <body class="container">
-<div>
-  <header class="masthead">
-    <h1 class="masthead-title"><a href="/">EMACS-CHINA</a></h1>
-    <p>=============&gt;集思广益</p>
-    <nav class="site-nav">
-      <div class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" fill="#ffff00"/>
-          <path d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" fill="#ffff00"/>
-          <path d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" fill="#ffff00"/>
-        </svg>
-      </div>
-      <ul class="trigger">
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/authors/">Authors</a></li>
-        <li><a href="/tags/">Tags</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="https://github.com/emacs-china">GitHub</a></li>
-        <li><a href="/rss.xml">RSS</a></li>
-      </ul>
-    </nav>
-    <form method="get" id="searchform" action="http://www.gfsoso.com/search">
-      <input type="text" class="field" name="q" id="s" placeholder="Search">
-      <input type="hidden" name="as_sitesearch" value="emacs-china.github.io">
-    </form>
-  </header>
-</div>
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="http://emacs-china.github.io/">EMACS-CHINA</a></h1>
+        <p>=============&gt;集思广益</p>
+        <ul>
+          <li><a href="http://emacs-china.github.io/blog/">Blog</a></li>
+          <li><a href="http://emacs-china.github.io/tags/">Tags</a></li>
+          <li><a href="http://emacs-china.github.io/authors/">Authors</a></li>
+          <li><a href="http://emacs-china.github.io/about/">About</a></li>
+          <li><a href="https://github.com/emacs-china">Github</a></li>
+          <li><a href="http://emacs-china.github.io/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="http://www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="emacs-china.github.io">
+        </form>
+      </header>
+    </div>
 
 <div>
 <div class="post">
@@ -71,18 +62,19 @@
 <li><a href="#orgheadline7">静态站点生成器</a>
 <ul>
 <li><a href="#orgheadline8">org-page</a></li>
+<li><a href="#orgheadline9">org-webpage</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline9">中文资料</a></li>
-<li><a href="#orgheadline10">各种各样的联系方式</a></li>
+<li><a href="#orgheadline10">中文资料</a></li>
+<li><a href="#orgheadline11">各种各样的联系方式</a></li>
 </ul>
 </div>
 </div>
 
 <div class="figure">
-<p><img src="./assets/dragon2.svg" alt="dragon2.svg" class="center" />
+<p><img src="http://emacs-china.github.io/assets/dragon2.svg" alt="dragon2.svg" class="center" />
 </p>
 </div>
 
@@ -154,16 +146,25 @@ emacs自带各国输入法，当然也包括中文。
 <h4 id="orgheadline8">org-page</h4>
 <div class="outline-text-4" id="text-orgheadline8">
 <p>
-Kelvin Hu 先生所写的静态站点生成器，基于 emacs 和 org-mode 本站点即由该生成器生成，简约美观，设计合理（如有不合理之处，欢迎拍砖（即是向该项目提交patch，改进它））。
+Kelvin Hu 先生所写的静态站点生成器，基于 emacs、 org-mode 和 git （git 功能的添加使它支持 增量式的文档发布功能） ，简约美观，设计合理。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-4">
+<h4 id="orgheadline9">org-webpage</h4>
+<div class="outline-text-4" id="text-orgheadline9">
+<p>
+tumashu 先生在 Kelvin Hu 先生的 org-page 基础上所写的静态站点生成器（org-webpage 在 org-page 上添加了主题继承功能，但该观点未被 Kelvin Hu 采纳，后来独立出该分支，并集成了站点本地测试的功能）。相较 org-page ，org-webpage 更适合多站点管理时使用，本站点即是由它生成。
 </p>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-2">
-<h2 id="orgheadline9">中文资料</h2>
-<div class="outline-text-2" id="text-orgheadline9">
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10">中文资料</h2>
+<div class="outline-text-2" id="text-orgheadline10">
 <p>
 在本站点的 Blog 目录下面，可以在 Tags 下面按标签索引文件，也可使用 search 框。
 </p>
@@ -178,9 +179,9 @@ Kelvin Hu 先生所写的静态站点生成器，基于 emacs 和 org-mode 本�
 </div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-2">
-<h2 id="orgheadline10">各种各样的联系方式</h2>
-<div class="outline-text-2" id="text-orgheadline10">
+<div id="outline-container-orgheadline11" class="outline-2">
+<h2 id="orgheadline11">各种各样的联系方式</h2>
+<div class="outline-text-2" id="text-orgheadline11">
 <dl class="org-dl">
 <dt>weibo</dt><dd>……</dd>
 <dt>IRC</dt><dd>……</dd>
@@ -197,15 +198,15 @@ Kelvin Hu 先生所写的静态站点生成器，基于 emacs 和 org-mode 本�
 </div>
 </div>
 <div>
-  <script src="/media/js/jquery-2.1.3.min.js"></script>
-  <script src="/media/js/kdComment.js"></script>
+  <script src="http://emacs-china.github.io/media/js/jquery-2.1.3.min.js"></script>
+  <script src="http://emacs-china.github.io/media/js/kdComment.js"></script>
   <div class="footer">
-    <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x (<a href="http://orgmode.org">Org mode</a> 8.x)</p>
+    <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x(<a href="http://orgmode.org">Org mode</a> 8.x)</p>
     <p>
-      Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:emacs-china@googlegroups.com">emacs-china</a>
+      Copyright &copy; 2014 - <span id="footerYear"></span> <a href="mailto:emacs-china &lt;at&gt; googlegroups &lt;dot&gt; com">emacs-china</a>
       &nbsp;&nbsp;-&nbsp;&nbsp;
-      Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a><br/>
-      Themed with <a href="https://github.com/kuangdash/emacs_love" target="_blank">emacs_love</a>
+      Powered by <a href="https://github.com/tumashu/org-webpage" target="_blank">org-webpage</a><br/>
+      Themed with <a href="https://github.com/kuangdash/owp_emacs_love" target="_blank">emacs_love</a>
       <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
     </p>
   </div>
