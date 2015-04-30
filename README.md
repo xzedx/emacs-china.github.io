@@ -6,8 +6,8 @@
 
 本站使用 org-page 搭建，目前仍在搭建过程中，有以下的任务需要完成：
 
-- [ ] improve emacs-china workflow
-- [ ] maintain and update
+- [x] improve emacs-china workflow
+- [x] maintain and update
 - [ ] emacs lisp manual?
 - [ ] prettify UI?
 
