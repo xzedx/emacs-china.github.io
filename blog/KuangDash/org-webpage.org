@@ -59,15 +59,14 @@ org-webpage 的着重点在于 *多站点的管理* ，这导致了它在设置�
 + =:web-server-docroot= :: 这里放用于测试站点的目录，org-webpage 集成了一个用于测试的小型服务器。
 + =:web-server-port= :: 这里是服务器的服务端口。
 
-* 关于 org-page 的其他功能
-org-page 还支持 “主题继承”，能让多站点管理时的主题修改轻松很多。这里只点一下要点：
+* 关于 org-webpage 的其他功能
+org-webpage 还支持 “主题继承”，能让多站点管理时的主题修改轻松很多。这里只点一下要点：
 
 #+BEGIN_SRC emacs-lisp
 :theme (haru emacs_love)
 #+END_SRC
 
 =haru= 是在 =emacs_love= 上修改的主题。实际上 =:theme= 对应的括号里可以有很多主题，形成一个 _主题链_[fn:3] 。
-
 
 * Footnotes
 
