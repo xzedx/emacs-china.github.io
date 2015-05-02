@@ -51,9 +51,11 @@ p {
     margin-bottom: 20px;
     text-align: center;
 }
+/*
 h1 {
     font-size:20px;
 }
+*/
 h2, h3, h4 {
     font-size:18px;
 }
@@ -112,7 +114,9 @@ hr {
     border: 0;
     border-bottom: 1px solid #e2e3e4;
 }
-
+p  {
+    text-indent:2em;
+}
 ul, ol {
     padding: 0;
     margin: 0 0 20px;
@@ -177,10 +181,15 @@ pre.src-matlab:before  { content: 'matlab'; }
 pre.src-maxima:before  { content: 'maxima'; }
 pre.src-lisp:before   { content: 'common lisp'; }
 
+.verse {
+    color: #afa;
+    text-indent: 0;
+}
+
 blockquote {
     padding: 0 0 0 20px;
     margin: 0 30px 20px -22.5px;
-    color: #999;
+    color: #afa;
     border-left: 8px solid #e5e5e5;
 }
 blockquote p:last-child {
