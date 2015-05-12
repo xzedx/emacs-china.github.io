@@ -51,11 +51,10 @@ p {
     margin-bottom: 20px;
     text-align: center;
 }
-/*
+
 h1 {
     font-size:20px;
 }
-*/
 h2, h3, h4 {
     font-size:18px;
 }
@@ -113,9 +112,6 @@ hr {
     margin: 0;
     border: 0;
     border-bottom: 1px solid #e2e3e4;
-}
-p  {
-    text-indent:2em;
 }
 ul, ol {
     padding: 0;
