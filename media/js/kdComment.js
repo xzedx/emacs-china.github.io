@@ -26,7 +26,7 @@ $(window).scroll(function () {
     //var top1=kd_head.find(kd_str).offset().top;
     var startPoint=0;
     var endPoint=kd_head.length-1;
-    var offsetValue=window.pageYOffset+20;
+    var offsetValue=window.pageYOffset+40;
     if(kd_head.eq(kd_tmp).offset().top>offsetValue || offsetValue>kd_head.eq((kd_tmp+1)>(kd_head.length-1)?(kd_head.length-1):(kd_tmp+1)).offset().top){
         while((startPoint+1) < endPoint){
             if(kd_head.eq(Math.floor((startPoint+endPoint)/2)).offset().top > offsetValue){
