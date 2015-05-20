@@ -27,19 +27,19 @@ $(window).scroll(function () {
     var startPoint=0;
     var endPoint=kd_head.length-1;
     var offsetValue=window.pageYOffset+20;
-    if(kd_head.eq(kd_tmp)[0].offsetTop>offsetValue || offsetValue>kd_head.eq((kd_tmp+1)>(kd_head.length-1)?(kd_head.length-1):(kd_tmp+1))[0].offsetTop){
+    if(kd_head.eq(kd_tmp).offset().top>offsetValue || offsetValue>kd_head.eq((kd_tmp+1)>(kd_head.length-1)?(kd_head.length-1):(kd_tmp+1)).offset().top){
         while((startPoint+1) < endPoint){
-            if(kd_head.eq(Math.floor((startPoint+endPoint)/2))[0].offsetTop > offsetValue){
+            if(kd_head.eq(Math.floor((startPoint+endPoint)/2)).offset().top > offsetValue){
                 endPoint = Math.floor((startPoint+endPoint)/2);
             }
-            else if(kd_head.eq(Math.floor((startPoint+endPoint)/2))[0].offsetTop < offsetValue){
+            else if(kd_head.eq(Math.floor((startPoint+endPoint)/2)).offset().top < offsetValue){
                 startPoint = Math.floor((startPoint+endPoint)/2);
             }
             else{
                 break;
             }
         }
-        if(offsetValue>kd_head.eq(kd_head.length-1)[0].offsetTop){
+        if(offsetValue>kd_head.eq(kd_head.length-1).offset().top){
             kd_n=kd_head.length-1;
         }
         else{
