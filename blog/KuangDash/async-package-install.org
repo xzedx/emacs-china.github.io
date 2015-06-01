@@ -11,7 +11,7 @@
 #+LANGUAGE:    zh-CN
 #+OPTIONS:     H:4 num:nil toc:t \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 
-这里将分享两段代码，说明如何在 emacs 24 中异步安装 packages （我想大部分人都有等待 list-packages 命令的经历，在 emacs 25 里面已经解决了这个问题，但对于目前使用 emacs 24 的同学，这篇 blog 还是有好处的。）
+这里将分享两段代码，说明如何在 emacs 24 中异步安装 packages （我想大部分人都有等待 list-packages 命令的经历，在 emacs 25 里面已经解决了这个问题，但对于目前使用 emacs 24 的同学，这篇 blog 还是有些用处的吧。）
 
 * 先决条件 ~ prerequisite
 首先，这个解决方法依赖 [[https://github.com/jwiegley/emacs-async][async]] 包。（如果你的 emacs 上安装了 helm ，那么就不必担心这个依赖了。helm 自带该包）
@@ -28,10 +28,10 @@
     (async-start
      `(lambda ()
         (setq package-archives
-              '(("gnu"         . "http://elpa.gnu.org/packages/")
+              '(("gnu"         . "http://elpa.gnu.org/packages/"); 这里是你的包 ‘源’
                 ("org"         . "http://orgmode.org/elpa/")
                 ("melpa"       . "http://melpa.milkbox.net/packages/")
-                ("marmalade"   . "http://marmalade-repo.org/packages/")))
+                ("marmalade"   . "http://marmalade-repo.org/packages/"))); 或者用 ,package-archives 替代掉这个列表，这点具体见 kd/package-install
         (require 'finder-inf nil t)
         ;; Initialize the package system if necessary.
         (package-initialize t)
@@ -71,19 +71,15 @@
 #+END_SRC
 
 * 用于替代 package-install 的命令 ~ the command used to replace =package-install=
-这个是 darksun 君写的命令，有问题的话不要怪我唷。
+这个是 [[https://github.com/lujun9972][darksun]] 君写的命令，有问题的话不要怪我唷。
 #+BEGIN_SRC emacs-lisp
   (defun kd/package-install (package-quote)
     "package-install async"
     (interactive (list (read-string "package-name? " "'")))
     (async-start
      `(lambda ()
-        (setq package-archives
-              '(("gnu"         . "http://elpa.gnu.org/packages/") ;这里是你的包 ‘源’
-                ("org"         . "http://orgmode.org/elpa/")
-                ("melpa"       . "http://melpa.milkbox.net/packages/")
-                ("marmalade"   . "http://marmalade-repo.org/packages/")))
-        (package-initialize)
+        (setq package-archives ,package-archives)
+        (package-initialize t)
         (package-install ,(read package-quote)))
      `(lambda (result)
         (package-initialize nil)
