@@ -40,7 +40,7 @@ html 页面的生成与发布都交给了 ~M-x op/do-publication~ 命令。（�
 * org-page 效果举例
 
 + 列表 :: +删除线+ _下划线_ *强调* ~代码~ 
-+ 数学公式 :: $X(f)=\int{x(t)e^{i 2\pi ft}dt}$ 
++ 数学公式 :: $X(f)=\int{x(t)e^{-i 2\pi ft}dt}$ 
 
 _悬停卡片_[fn:4]
 
@@ -180,6 +180,9 @@ _悬停卡片_[fn:4]
 
   (advice-add 'org-export-solidify-link-text :override #'kd/org-export-solidify-link-text)
 #+END_SRC
+
+<2015-06-06 周六> 
+更新： org-export-solidify-link-text 已经被 org-mode 8.3 弃用， radio target 的中文导出已正常， target 本身仅作为链接的锚点使用，本身不再导出成具体文件。
 
 ** org-mode 的 "src"_<language>{<body>}
 <2015-04-15 周三>
