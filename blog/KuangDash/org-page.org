@@ -182,6 +182,7 @@ _悬停卡片_[fn:4]
 #+END_SRC
 
 <2015-06-06 周六> 
+
 更新： org-export-solidify-link-text 已经被 org-mode 8.3 弃用， radio target 的中文导出已正常， target 本身仅作为链接的锚点使用，本身不再导出成具体文件。
 
 ** org-mode 的 "src"_<language>{<body>}
